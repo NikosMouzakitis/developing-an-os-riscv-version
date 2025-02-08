@@ -16,7 +16,7 @@ git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
 cd riscv-gnu-toolchain
 ./configure --prefix=/opt/riscv32 --with-arch=rv32gc --with-abi=ilp32d
 make -j$(nproc) 
-       	```
+```
 
 # comments
 
