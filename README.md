@@ -2,7 +2,18 @@
 developing-an-os-riscv-version
 
 
+# QEMU 
 
-# qemu emulation
+## Building OpenSBI for 32-bit RISC-V (RV32)
 
-**BIOS** : point it to opensbi: fw_jump.bin.
+Ensure you have the **RISC-V 32-bit toolchain** installed. If not, you can build it manually:
+
+### Installing the RISC-V 32-bit Toolchain
+Clone the repository and build the toolchain:
+
+```sh
+git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
+cd riscv-gnu-toolchain
+./configure --prefix=/opt/riscv32 --with-arch=rv32gc --with-abi=ilp32d
+make -j$(nproc)
+
