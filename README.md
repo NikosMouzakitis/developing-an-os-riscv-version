@@ -15,5 +15,11 @@ Clone the repository and build the toolchain:
 git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
 cd riscv-gnu-toolchain
 ./configure --prefix=/opt/riscv32 --with-arch=rv32gc --with-abi=ilp32d
-make -j$(nproc)
+make -j$(nproc) 
+       	```
 
+# comments
+
+*text.boot*(and therefore boot function) is placed exactly at 0x80200000, 
+since OpenSBI simply jumps at this address without
+knowledge of a specific entry point.
